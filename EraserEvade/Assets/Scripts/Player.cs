@@ -22,6 +22,13 @@ public class Player : MonoBehaviour
 
         transform.Translate(move_speed * Vector2.right * horizontal * Time.deltaTime);
 
+        if (transform.position.x > 1.75f || transform.position.x < -1.75f)
+        {
+            Vector3 temp = transform.position;
+            temp.x = Mathf.Clamp(temp.x, -1.75f, 1.75f);
+            transform.position = temp;
+        }
+
         horizontal = 0;
     }
 
@@ -43,5 +50,16 @@ public class Player : MonoBehaviour
     public void OnRightButtonUp()
     {
         is_right_button_clicking = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Obstacle obstacle = collision.GetComponent<Obstacle>();
+
+        if (obstacle != null)
+        {
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+        }
     }
 }
