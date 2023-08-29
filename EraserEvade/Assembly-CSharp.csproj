@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\InGameSceneManager.cs" />
+    <Compile Include="Assets\script\character_move.cs" />
     <Compile Include="Assets\Scripts\ObstacleDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>

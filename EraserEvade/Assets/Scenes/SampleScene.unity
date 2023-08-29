@@ -155,7 +155,9 @@ MonoBehaviour:
   obstacles_spawn_number_at_once: 1
   time_between_obstacles_spawn: 1
   obstacles:
-  - {fileID: 4538388404208854078, guid: d856c491d7909224fb40a123c65d97d5, type: 3}
+  - {fileID: 8222891325779033351, guid: 61c1d43886b2cfc4e949c3941586b08c, type: 3}
+  - {fileID: 863601120357643217, guid: 119cf1ef73f7c5247afddfa4c7988386, type: 3}
+  - {fileID: 3607912284408572199, guid: a7626a7a237b90c47ae68c0658404102, type: 3}
 --- !u!4 &314216135
 Transform:
   m_ObjectHideFlags: 0
