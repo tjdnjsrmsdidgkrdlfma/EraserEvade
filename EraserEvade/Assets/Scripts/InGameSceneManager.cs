@@ -47,7 +47,7 @@ public class InGameSceneManager : MonoBehaviour
             for (int i = 0; i < obstacles_spawn_number_at_once; i++)
             {
                 int random_index = Random.Range(0, obstacles.Length);
-                Vector2 random_obstacle_spawn_position = new Vector2(Random.Range(-screen_x_half_size, screen_x_half_size), screen_y_half_size * 3);
+                Vector2 random_obstacle_spawn_position = new Vector2(Random.Range(-screen_x_half_size, screen_x_half_size), screen_y_half_size *1.2f);
                 Instantiate(obstacles[random_index], random_obstacle_spawn_position, Quaternion.identity);
             }
         }
@@ -57,7 +57,7 @@ public class InGameSceneManager : MonoBehaviour
     {
         while (true)
         {
-            score += score_per_frame;
+            score += 1;//이거 내일 
 
             StringBuilder sb = new StringBuilder();
             sb.Append("SCORE: ");
