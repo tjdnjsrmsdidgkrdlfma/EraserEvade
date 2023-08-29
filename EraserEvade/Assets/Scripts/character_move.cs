@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class character_move : MonoBehaviour
+public class Character : MonoBehaviour
 {
     public float moveSpeed = 5f; // 이동 속도
     public float lerpSpeed = 10f; // 부드러운 이동을 위한 보간 속도

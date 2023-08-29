@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InGameSceneManager : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class InGameSceneManager : MonoBehaviour
     #region Score
 
     [SerializeField] int score_per_frame;
-    [SerializeField] TextMesh score_text;
+    [SerializeField] Text score_text;
 
     int score;
 
@@ -56,7 +58,11 @@ public class InGameSceneManager : MonoBehaviour
         while (true)
         {
             score += score_per_frame;
-            score_text.text = score.ToString();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("SCORE: ");
+            sb.Append(score.ToString());
+            score_text.text = sb.ToString();
 
             yield return null;
         }
