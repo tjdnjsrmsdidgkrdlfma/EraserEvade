@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1990904226769285599}
   - component: {fileID: 2583065434180302207}
   - component: {fileID: -3813887104047138679}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: WaterDrop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

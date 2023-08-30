@@ -4,22 +4,38 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float move_speed;
 
-    bool is_left_button_clicking;
-    bool is_right_button_clicking;
-
+    private bool is_left_button_clicking;
+    private bool is_right_button_clicking;
+    private Animator animator; // Animator 컴포넌트
+    
     float horizontal;
+
+
+    void Start()
+    {
+        animator = GetComponent<Animator>(); // Animator 컴포넌트 가져오기
+    }
 
     void Update()
     {
         if (is_left_button_clicking == true && is_right_button_clicking == true)
             horizontal = 0;
         else if (is_left_button_clicking == true)
+        {
             horizontal = -1;
+            animator.SetBool("L_move", true);
+        }
         else if (is_right_button_clicking == true)
+        {
             horizontal = 1;
+            animator.SetBool("R_move", true);
+        }
         else if (is_left_button_clicking == false && is_right_button_clicking == false)
+        {
             horizontal = 0;
-
+            animator.SetBool("R_move", false);
+            animator.SetBool("L_move", false);
+        }
         transform.Translate(move_speed * Vector2.right * horizontal * Time.deltaTime);
 
         if (transform.position.x > 1.75f || transform.position.x < -1.75f)
