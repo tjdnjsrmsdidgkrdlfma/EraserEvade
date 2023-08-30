@@ -75,10 +75,9 @@ public class Player : MonoBehaviour
 
         if (obstacle != null)
         {
-            Time.timeScale = 0;
-            //죽음 불러오기
+            InGameSceneManager in_game_scene_manager = FindObjectOfType<InGameSceneManager>();
+            DataManager.instance.SaveData(in_game_scene_manager.score);
             SceneManager.LoadScene("die");
-            Debug.Log("Game Over");
         }
     }
 }

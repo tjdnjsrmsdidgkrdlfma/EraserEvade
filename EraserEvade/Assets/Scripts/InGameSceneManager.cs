@@ -18,10 +18,10 @@ public class InGameSceneManager : MonoBehaviour
 
     #region Score
 
+    public int score;
+
     [SerializeField] int score_per_frame;
     [SerializeField] Text score_text;
-
-    int score;
 
     #endregion
 
