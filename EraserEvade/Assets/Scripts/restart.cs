@@ -7,12 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class restart : MonoBehaviour
 {
-    private void Update()
+    public void OnRestartButtonClicked()
     {
-        if (Input.GetMouseButton(0) == true)
-        {
-            SceneManager.LoadScene("InGame");
-        }
-
-    }
+        SceneManager.LoadScene("InGame");
+    } 
 }
