@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Move_star_text.cs" />
+    <Compile Include="Assets\Scripts\restart.cs" />
     <Compile Include="Assets\Scripts\InGameSceneManager.cs" />
     <Compile Include="Assets\Scripts\StartSceneManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

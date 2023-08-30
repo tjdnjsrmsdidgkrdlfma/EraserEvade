@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -75,6 +76,8 @@ public class Player : MonoBehaviour
         if (obstacle != null)
         {
             Time.timeScale = 0;
+            //죽음 불러오기
+            SceneManager.LoadScene("die");
             Debug.Log("Game Over");
         }
     }
