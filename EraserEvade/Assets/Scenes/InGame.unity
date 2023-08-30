@@ -227,6 +227,8 @@ MonoBehaviour:
   - {fileID: 863601120357643217, guid: 119cf1ef73f7c5247afddfa4c7988386, type: 3}
   - {fileID: 3607912284408572199, guid: a7626a7a237b90c47ae68c0658404102, type: 3}
   - {fileID: 2562667573936352986, guid: 185713011384b9149ad6d4800ecc5457, type: 3}
+  - {fileID: 5053836374276968386, guid: f97e968417ca9b240863a3f6d2c074f1, type: 3}
+  score: 0
   score_per_frame: 1
   score_text: {fileID: 1656078334}
 --- !u!4 &314216135

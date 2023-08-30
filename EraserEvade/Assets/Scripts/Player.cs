@@ -10,11 +10,12 @@ public class Player : MonoBehaviour
     private Animator animator; // Animator 컴포넌트
     
     float horizontal;
-
+    private AudioSource audioSource;
 
     void Start()
     {
         animator = GetComponent<Animator>(); // Animator 컴포넌트 가져오기
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
             InGameSceneManager in_game_scene_manager = FindObjectOfType<InGameSceneManager>();
             DataManager.instance.SaveData(in_game_scene_manager.score);
             SceneManager.LoadScene("die");
+            audioSource.playOnAwake = true;
         }
     }
 }
