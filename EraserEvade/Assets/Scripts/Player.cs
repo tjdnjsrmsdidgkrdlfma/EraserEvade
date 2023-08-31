@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
             InGameSceneManager in_game_scene_manager = FindObjectOfType<InGameSceneManager>();
             DataManager.instance.SaveData(in_game_scene_manager.score);
             SceneManager.LoadScene("die");
-            audioSource.playOnAwake = true;
+            //audioSource.playOnAwake = true;
         }
     }
 }
